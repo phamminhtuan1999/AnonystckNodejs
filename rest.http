@@ -3,7 +3,10 @@
 @port = 3000
 @host  = {{hostname}}:{{port}}
 @baseUrl = http://{{host}}
+@user = user
 ###
 GET {{baseUrl}} HTTP/1.1
-###
+### test url does not exist
 GET {{baseUrl}}/abc HTTP/1.1
+### user register
+POST {{baseUrl}}/{{user}}/register HTTP/1.1

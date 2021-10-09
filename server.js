@@ -1,13 +1,16 @@
 const express = require("express");
-const dotenv = require("dotenv");
 const createError = require("http-errors");
-
+const UserRoute = require("./Routes/User.route");
 const app = express();
-dotenv.config();
+
+require("dotenv").config();
+require("./helpers/connections_mongodb");
 
 app.get("/", (req, res, next) => {
   res.send("Homepage");
 });
+
+app.use("/user", UserRoute);
 
 app.use((req, res, next) => {
   next(createError.NotFound("This route does not exist"));
