@@ -1,1 +1,3 @@
-# AnonystckNodejs
+# AnonystickNodejs
+
+# Setting dotenv
