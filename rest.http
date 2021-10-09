@@ -1,9 +1,0 @@
-### variables
-@hostname = localhost
-@port = 3000
-@host  = {{hostname}}:{{port}}
-@baseUrl = http://{{host}}
-###
-GET {{baseUrl}} HTTP/1.1
-###
-GET {{baseUrl}}/abc HTTP/1.1
